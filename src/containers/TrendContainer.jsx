@@ -17,7 +17,7 @@ const TrendContainer = (props) => {
 
     return (
         <div>
-            <h1>Action Movies</h1>
+            <h1>Trend Movies</h1>
         </div>
     )
 }

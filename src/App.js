@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import TrendContainer from './containers/TrendContainer';
+import React from 'react';
+import Nav from './components/Nav';
+
+
 
 function App() {
 
   return (
     <div className="App">
-      <TrendContainer/>
+      <Nav/>
     </div>
   );
 }

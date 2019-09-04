@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TrendMovie = ({ title, id, img}) => {
+const Movie = ({ title, id, img}) => {
 
     return (
         <div className="movieBox">
@@ -10,4 +10,4 @@ const TrendMovie = ({ title, id, img}) => {
     )
 }
 
-export default TrendMovie;
+export default Movie;
