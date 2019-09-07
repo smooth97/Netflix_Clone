@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchComedyMovies } from '../store/actions/index';
-
+import Movie from '../components/Movie';
 
 const ComedyContainer = (props) => {
 
@@ -11,12 +11,16 @@ const ComedyContainer = (props) => {
             dispatch(fetchComedyMovies());
         }, []);
 
-        const comedyData = useSelector(state => state.trending)
-
+        const comedyData = useSelector(state => state.comedy.movies, []) || [];
 
     return (
         <div>
-            <h1>Comedy Movies</h1>
+            <p>Comedy Movies</p>
+            {/* <div className="movieContainer">
+                { comedyData.results && comedyData.results.map(movie => (
+                    <Movie img={movie.backdrop_path} key={movie.id}/>
+                ))}
+            </div> */}
         </div>
     )
 }

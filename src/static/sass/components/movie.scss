@@ -1,0 +1,16 @@
+.movieContainer {
+    width: 100%;
+    height: 6rem;
+    background: gray;
+    display: flex;
+
+    .movie {
+        width: 200px;
+        height: 80%;
+        background: white;
+        
+        img {
+            width: 100%;
+        }
+    }
+}

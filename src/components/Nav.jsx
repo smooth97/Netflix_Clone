@@ -8,7 +8,7 @@ const Nav = () => {
             <ul className="navigation_container">
                 <img className="navigation_container logo" src={NetflixLogo} alt="logo" />
                 <div className="navigation_container link">Home</div>
-                <div className="navigation_container link">Tv Shows</div>
+                <div className="navigation_container link">TV Shows</div>
                 <div className="navigation_container link">Movies</div>
                 <div className="navigation_container link">Recently</div>
                 <div className="navigation_container link">My List</div>
