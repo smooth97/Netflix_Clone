@@ -12,6 +12,14 @@ const Nav = () => {
                 <div className="navigation_container link">Movies</div>
                 <div className="navigation_container link">Recently</div>
                 <div className="navigation_container link">My List</div>
+
+                <div className="navigation_container left">
+
+                </div>
+
+                <div className="navigation_container link">KIDS</div>
+                <div className="navigation_container link">DVD</div>
+
             </ul>
         </nav>
     );
