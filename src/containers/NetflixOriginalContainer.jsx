@@ -11,14 +11,14 @@ const NetflixOriginalContainer = (props) => {
             dispatch(fetchNetflixOriginals());
         }, []);
 
-        const netflixData = useSelector(state => state.netflixOriginals.data, []) || [];
+        const netflixData = useSelector(state => state.netflixOriginals.movies, []) || [];
 
     return (
         <div>
             <p>Netflix Original Movies</p>
-            {/* <div className="movieContainer">
+             {/* <div className="movieContainer">
                 { netflixData.results && netflixData.results.map(movie => (
-                    <Movie img={movie.poster_path} key={movie.id}/>
+                    <Movie props={movie}/>
                 ))}
             </div> */}
         </div>
