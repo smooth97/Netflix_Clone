@@ -17,11 +17,11 @@ const TrendContainer = (props) => {
     return (
         <div>
             <p>Trend Movies</p>  
-            <div className="movieContainer">
+            {/* <div className="movieContainer">
                 { TrendData.results && TrendData.results.map(movie => (
                     <Movie props={movie}/>
                 ))}
-            </div>
+            </div> */}
         </div>
     )
 }

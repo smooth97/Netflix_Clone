@@ -16,11 +16,11 @@ const NetflixOriginalContainer = (props) => {
     return (
         <div>
             <p>Netflix Original Movies</p>
-             {/* <div className="movieContainer">
+            <div className="movieContainer">
                 { netflixData.results && netflixData.results.map(movie => (
                     <Movie props={movie}/>
                 ))}
-            </div> */}
+            </div>
         </div>
     )
 }
