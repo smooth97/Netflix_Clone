@@ -11,7 +11,7 @@ import DocumentaryContainer from './DocumentaryContainer';
 const Layout = () => {
 
     return (
-        <div>
+        <div className="layout">
             <NetflixOriginalContainer/>
             <TrendContainer/>
             <TopRatedContainer/>

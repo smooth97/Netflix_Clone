@@ -1,14 +1,37 @@
+.layout {
+    width: 90vw;
+    margin: auto;
+    background: $color-background;
+
+    p {
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        
+    }
+}
 .movieContainer {
-    height: 30vh;
-    background: gray;
+    margin: 2rem 0;
+    position: static;
     display: flex;
+    overflow: auto;
 
     .movie {
-        width: 200px;
         background: black;
         margin: 5px;
+
         img {
-            width: 100%;
+            width: 15vw;
+        }
+    }
+
+    .netflixMovie {
+        background: black;
+        margin-right: 1rem;
+
+        img {
+            width: 22vw;
         }
     }
 }

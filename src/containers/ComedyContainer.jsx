@@ -16,11 +16,11 @@ const ComedyContainer = (props) => {
     return (
         <div>
             <p>Comedy Movies</p>
-            {/* <div className="movieContainer">
+            <div className="movieContainer">
                 { comedyData.results && comedyData.results.map(movie => (
-                    <Movie img={movie.backdrop_path} key={movie.id}/>
+                    <Movie props={movie} key={movie.id}/>
                 ))}
-            </div> */}
+            </div>
         </div>
     )
 }

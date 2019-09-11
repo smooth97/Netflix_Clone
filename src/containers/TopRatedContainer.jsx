@@ -12,16 +12,16 @@ const TopRatedContainer = (props) => {
             dispatch(fetchTopRated());
         }, []);
 
-        const topRatedData = useSelector(state => state.topRated.data, []) || [];
+        const topRatedData = useSelector(state => state.topRated.movies, []) || [];
 
     return (
         <div>
             <p>Top Rated Movies</p>
-            {/* <div className="movieContainer">
+            <div className="movieContainer">
                 { topRatedData.results && topRatedData.results.map(movie => (
-                    <Movie img={movie.backdrop_path} key={movie.id}/>
+                    <Movie props={movie} key={movie.id}/>
                 ))}
-            </div> */}
+            </div>
         </div>
     )
 }

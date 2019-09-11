@@ -16,11 +16,11 @@ const DocumentaryContainer = (props) => {
     return (
         <div>
             <p>Documentary Movies</p>
-            {/* <div className="movieContainer">
+            <div className="movieContainer">
                 { documentaryData.results && documentaryData.results.map(movie => (
-                    <Movie img={movie.backdrop_path} key={movie.id}/>
+                    <Movie props={movie} key={movie.id}/>
                 ))}
-            </div> */}
+            </div>
         </div>
     )
 }

@@ -11,17 +11,17 @@ const HorrorContainer = (props) => {
             dispatch(fetchHorrorMovies());
         }, []);
 
-        const horrorData = useSelector(state => state.horror.data, []) || [];
+        const horrorData = useSelector(state => state.horror.movies, []) || [];
 
 
     return (
         <div>
             <p>Horror Movies</p>
-            {/* <div className="movieContainer">
+            <div className="movieContainer">
                 { horrorData.results && horrorData.results.map(movie => (
-                    <Movie img={movie.backdrop_path} key={movie.id}/>
+                    <Movie props={movie} key={movie.id}/>
                 ))}
-            </div> */}
+            </div>
         </div>
     )
 }

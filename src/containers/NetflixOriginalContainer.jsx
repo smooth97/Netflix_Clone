@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchNetflixOriginals } from '../store/actions/index';
-import Movie from '../components/Movie';
+import NetflixMovie from '../components/NetflixMovie';
 
 const NetflixOriginalContainer = (props) => {
 
@@ -15,10 +15,10 @@ const NetflixOriginalContainer = (props) => {
 
     return (
         <div>
-            <p>Netflix Original Movies</p>
+            <p>Netflix Originals</p>
             <div className="movieContainer">
                 { netflixData.results && netflixData.results.map(movie => (
-                    <Movie props={movie}/>
+                    <NetflixMovie props={movie} key={movie.id}/>
                 ))}
             </div>
         </div>

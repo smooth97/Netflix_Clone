@@ -11,17 +11,17 @@ const RomanceContainer = (props) => {
             dispatch(fetchRomanceMovies());
         }, []);
 
-        const romanceData = useSelector(state => state.romance.data, []) || [];
+        const romanceData = useSelector(state => state.romance.movies, []) || [];
 
 
     return (
         <div>
             <p>Romance Movies</p>
-            {/* <div className="movieContainer">
+            <div className="movieContainer">
                 { romanceData.results && romanceData.results.map(movie => (
-                    <Movie img={movie.backdrop_path} key={movie.id}/>
+                    <Movie props={movie} key={movie.id}/>
                 ))}
-            </div> */}
+            </div>
         </div>
     )
 }
