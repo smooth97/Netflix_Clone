@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from './Modal';
 
 const Movie = (props) => {
-    const API_KEY = '224ce27b38a3805ecf6f6c36eb3ba9d0';
+
+    const [modal, setModal] = useState(false);
+
+    const handleModal = () => {
+        setModal(true);
+        console.log(modal);
+    }
+
+
     return (
             <div className="movie">
+                <Modal className={"modalContainer " + modal ? "toggle" : ""} props={props}/>
                 <p></p>
-                <img src={`https://image.tmdb.org/t/p/original/${props.props.backdrop_path}`} alt={props.props.id}/>
+                <img src={`https://image.tmdb.org/t/p/original/${props.props.backdrop_path}`} alt={props.props.id} onclick={handleModal}/>
             </div>
     )
 }
