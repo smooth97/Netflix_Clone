@@ -5,33 +5,67 @@
 
     p {
         color: white;
-        font-size: 1rem;
+        font-size: 1em;
         font-weight: 700;
         text-transform: uppercase;
         
     }
 }
+
 .movieContainer {
-    margin: 2rem 0;
+    margin: 2em 0;
+    padding: 15px;
+    align-items: center;
     position: static;
     display: flex;
-    overflow: auto;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+        background: none;
+        border: 1px solid rgb(48, 48, 48); 
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgb(85, 85, 85);
+        border-radius: 30px;
+    }
+
+    &:hover .movie {
+        opacity: .3;
+    }
 
     .movie {
         background: black;
         margin: 5px;
+        transition: all 0.2s ease-in;
+        
+
+        &:hover {
+            transform: scale(1.3);
+            opacity: 1;
+            z-index: 1;
+        }
 
         img {
-            width: 15vw;
+            height: 8em;
         }
+    }
+
+    &:hover .netflixMovie {
+        opacity: .3;
     }
 
     .netflixMovie {
         background: black;
         margin-right: 1rem;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
 
         img {
-            width: 22vw;
+            height: 27em;
         }
     }
 }
