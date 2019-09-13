@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiPlay } from 'react-icons/fi';
 import { FiPlus } from 'react-icons/fi';
 
 const Modal = (props) => {
 
+     const [modal, setModal] = useState(false);
+    console.log()
+
+    const handleModal = () => {
+        setModal(true);
+        console.log("toggle");
+    }
+
+    //onClick={(e) => handleModal(e)}
+
     return (
-        <div className="modalContainer">
+        <div className={"modalContainer " + (modal ? "toggle" : "")} onClick={() => handleModal()}>
             <div className="modal">
                 <div className="modal-content">
                     <h1>{props.props.name}</h1>

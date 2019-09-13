@@ -13,11 +13,11 @@ const Layout = () => {
         <div className="layout">
             <NetflixOriginalContainer/>
             <TrendContainer/>
-            <TopRatedContainer/>
+            {/* <TopRatedContainer/>
             <ActionContainer/>
             <ComedyContainer/>
             <RomanceContainer/>
-            <HorrorContainer/>
+            <HorrorContainer/> */}
         </div>
     )
 }
