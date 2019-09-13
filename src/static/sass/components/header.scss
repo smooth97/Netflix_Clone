@@ -1,9 +1,40 @@
 header {
 
     .headerContainer {
+        position: relative;
 
         img {
             width: 100vw;
+        }
+
+        .headercontents {
+            position: absolute;
+            left: 5%;
+            bottom: 5%;
+            width: 60%;
+            height: 50%;
+            color: white;
+
+            .btn {
+                margin-top: 2%;
+                
+                button {
+                    padding: 2%;
+                    margin-right: 2%;
+                    background: rgba(36, 36, 36, 0.719);
+                    color: rgb(182, 181, 181);
+                    border: none;
+
+                    &:hover {
+                        background: rgba(36, 36, 36, 0.89);
+                        color: white;
+                    }
+                }
+            }
+
+            p {
+                margin-top: 3%;
+            }
         }
     }
 }
