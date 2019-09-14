@@ -23,6 +23,7 @@ body {
     .logo {
         height: 2.8rem;
         margin: .5rem;
+        cursor: pointer;
     }
 
     .left {
@@ -33,6 +34,7 @@ body {
             font-size: 12px;
             font-weight: 500;
             color: white;
+            cursor: pointer;
     
             &:hover {
                 color: $color-dark-grey;
@@ -44,10 +46,44 @@ body {
         margin: 0 3.8rem 0 0;
         display: flex;
         justify-content: space-around;
+        align-items: center;
         color: white;
         position: absolute;
-        width: 15%;
+        width: 30%;
         right: 0;
+        cursor: pointer;
+
+        .search-box {
+            display: flex;
+            padding: 3px;
+            height: 20px;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+            
+            .serchLogo {
+                position: absolute;
+            }
+
+            .search-txt {
+                width: 0;
+                padding: 10px;
+                background: $color-background;
+                border: none;
+                margin-left: 5%;
+                color: white;
+                transition: width .5s;
+                border: 2px solid white;
+                opacity: 0;
+
+                &:focus {
+                    padding-left: 4rem;
+                    width: 15rem;
+                    outline: none;
+                    opacity: 1;
+                }
+            }
+        }
 
         .link {
             margin: 0;
@@ -58,3 +94,4 @@ body {
         }
     }
 }
+

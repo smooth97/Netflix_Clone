@@ -7,7 +7,7 @@ import { FiGift } from "react-icons/fi";
 
 const Nav = () => {
 
-    // change background color
+    // change nav bg color
     const [scrolling, setScrolling] = useState(false);
 
     const handleScroll = () => {
@@ -32,7 +32,10 @@ const Nav = () => {
                     <div className="navigation_container link">My List</div>
                 </div>
                 <div className="icons">
-                    <div className="navigation_container link"><FiSearch/></div>
+                    <div className="search-box">
+                        <a className="searchLogo"><FiSearch/></a>
+                        <input className="search-txt" type="text" placeholder=" Title, genres"/>
+                    </div>
                     <div className="navigation_container link"><FiGift/></div>
                     <div className="navigation_container link"><FiBell/></div>
                     <div className="navigation_container link"><FiSmile/></div>

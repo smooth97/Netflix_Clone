@@ -1,32 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FiPlay } from 'react-icons/fi';
 import { FiPlus } from 'react-icons/fi';
+import { FiInfo } from 'react-icons/fi';
 
-const Modal = (props) => {
-
-     const [modal, setModal] = useState(false);
-    console.log()
-
-    const handleModal = () => {
-        setModal(true);
-        console.log("toggle");
-    }
-
-    //onClick={(e) => handleModal(e)}
+const Modal = ({ name, overview, img, show, containerName, onClick}) => {
 
     return (
-        <div className={"modalContainer " + (modal ? "toggle" : "")} onClick={() => handleModal()}>
+        show ?
+        <div className={containerName} onClick={onClick}>
             <div className="modal">
+                <img src={`https://image.tmdb.org/t/p/original/${img}`} alt="bg"/>
+                <div className="bg"></div>
                 <div className="modal-content">
-                    <h1>{props.props.name}</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil esse incidunt laudantium at eum labore atque sequi cum, dignissimos quod repudiandae totam sapiente nobis voluptatem accusantium dolores voluptatum, officia veritatis! Unde vel iste sit temporibus dolore aspernatur incidunt accusantium possimus. Repudiandae nobis vel quaerat ex eos velit aliquid accusamus magni?</p>
+                    <h1>{name}</h1>
+                    <p>{overview}</p>
                     <div className="btn">
-                        <button><FiPlay/>PLAY</button>
-                        <button><FiPlus/>MY LIST</button>
+                        <button><FiPlay/><span>PLAY</span></button>
+                        <button><FiPlus/><span>MY LIST</span></button>
+                        <button><FiInfo/><span>DETAILS</span></button>
                     </div>
                 </div>
             </div>
         </div>
+        :
+        null
     )
 }
 

@@ -1,30 +1,35 @@
 import React, { useState } from 'react';
 import Modal from './Modal';
 
+
 const Movie = (props) => {
 
-    const [modal, setModal] = useState({modalOpen: false});
+    const [modal, setModal] = useState(false);
 
-    const handleModal = (e) => {
-        setModal({modalOpen: true});
+    const showModal = (e) => {
+        e.preventDefault();
+        setModal(true);
     }
 
-    const open = () => {
-        setModal({modalOpen: true});
+    const closeModal = () => { 
+        setModal(false);
     }
 
-    const close = () => {
-        setModal({modalOpen: false});
-    }
-
-    //setModal(true);
 
     return (
-            <div className="movie" onClick={(e) => handleModal(e)}>
-                <Modal className={"modalContainer toggle"} props={props} open={open} close={close}/>
-                <p></p>
+        <>
+            <div className="movie" onClick={(e) => showModal(e)}>
                 <img src={`https://image.tmdb.org/t/p/original/${props.props.backdrop_path}`} alt={props.props.id}/>
             </div>
+            <Modal
+                containerName={"modalContainer " + (modal ? "show" : "hide")}
+                name={props.props.title}
+                overview={props.props.overview}
+                show={modal}
+                img={props.props.backdrop_path}
+                onClick={() => closeModal()}
+            />
+        </>
     )
 }
 
