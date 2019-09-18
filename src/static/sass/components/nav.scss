@@ -30,11 +30,17 @@ body {
         margin: 0;
         justify-content: flex-start;
 
+        
+
         .link {
             font-size: 12px;
             font-weight: 500;
             color: white;
             cursor: pointer;
+
+            @include responsive(tab_port) {
+                display: none;
+            }
     
             &:hover {
                 color: $color-dark-grey;
@@ -45,7 +51,7 @@ body {
     .icons {
         margin: 0 3.8rem 0 0;
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-end;
         align-items: center;
         color: white;
         position: absolute;
@@ -62,7 +68,7 @@ body {
         }
 
         .link {
-            margin: 0;
+            margin-left: 2rem;
 
             &:hover {
                 color: $color-dark-grey;
@@ -76,33 +82,41 @@ body {
     .inputContainer {
         display: flex;
         align-items: center;
+        position: relative;
 
-        .serchLogo {
-            z-index: 10;
+        .searchLogo {
+            position: absolute;
+            left: 5%;
+            padding: 10px;
+            cursor: pointer;
         }
 
         .search-txt {
-            width: 50px;
-            padding: 10px;
-            background: $color-background;
+            z-index: 1;
             border: none;
-            margin-left: 2%;
-            color: white;
-            transition: width .5s;
-            border: 2px solid white;
-            opacity: 1;
+            color: #fff;
+            outline: none;
+            width: 0px;
+            padding: 10px;
+            padding-right: 2rem;
+            background: $color-background;
+            border: 1px solid #fff;
+            transition: all .5s;
+            cursor: pointer;
+            opacity: 0;
 
             &:focus {
+                z-index: 0;
                 padding-left: 4rem;
                 width: 15rem;
-                outline: none;
+                cursor: text;
                 opacity: 1;
             }
         }
     }
 
     .searchMovie {
-        z-index: 200;
+        z-index: 100;
         width: 100vw;
         height: 86vh;
         background: $color-background;
@@ -122,12 +136,14 @@ body {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            
+            overflow: scroll;
             
 
             .lists {
                 img {
                     height: 300px;
+                    z-index: 5;
+                    margin-bottom: 1rem;
                 }
             }
         }

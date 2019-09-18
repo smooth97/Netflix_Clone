@@ -6,8 +6,7 @@ const Movie = (props) => {
 
     const [modal, setModal] = useState(false);
 
-    const showModal = (e) => {
-        e.preventDefault();
+    const showModal = () => {
         setModal(true);
     }
 
@@ -18,7 +17,7 @@ const Movie = (props) => {
 
     return (
         <>
-            <div className="movie" onClick={(e) => showModal(e)}>
+            <div className="movie" onClick={() => showModal()}>
                 <img src={`https://image.tmdb.org/t/p/original/${props.props.backdrop_path}`} alt={props.props.id}/>
             </div>
             <Modal

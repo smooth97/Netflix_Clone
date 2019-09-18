@@ -24,6 +24,10 @@ header {
             p {
                 margin-top: 2%;
                 width: 50%;
+
+                @include responsive(tab_port) {
+                    background: black;
+                }
             }
 
             .btn {

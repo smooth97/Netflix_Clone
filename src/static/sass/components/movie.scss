@@ -14,6 +14,7 @@
 
 .movieContainer {
     margin: 2em 0;
+    height: 10rem;
     padding: 15px;
     align-items: center;
     position: static;
@@ -37,9 +38,9 @@
         background: black;
         margin: 5px;
         transition: all 0.2s ease-in;
+        display: inline-block;
 
         &:hover {
-            transform: scale(1.3);
             opacity: 1;
             z-index: 1;
         }
@@ -47,7 +48,35 @@
         img {
             height: 8em;
             cursor: pointer;
+            transition: all 0.2s ease-in;
+
+            &:hover {
+                height: 11em;
+            }
         }
+    }
+
+    &:hover .netflixMovie {
+        opacity: .3;
+    }
+    
+}
+
+.netflixContainer {
+    margin: 2em 0;
+    padding: 15px;
+    align-items: center;
+    position: static;
+    display: flex;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+        background: none;
+        border: 1px solid rgb(48, 48, 48); 
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgb(85, 85, 85);
+        border-radius: 30px;
     }
 
     &:hover .netflixMovie {
@@ -55,7 +84,6 @@
     }
 
     .netflixMovie {
-        background: black;
         margin-right: 1rem;
         transition: all 0.2s ease-in;
 
