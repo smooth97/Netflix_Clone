@@ -1,4 +1,5 @@
 header {
+    margin-bottom: 3%;
 
     .headerContainer {
         position: relative;
@@ -7,33 +8,53 @@ header {
             width: 100vw;
         }
 
-        .headercontents {
+        .headerContents {
             position: absolute;
+            bottom: 10%;
             left: 5%;
-            bottom: 5%;
             width: 60%;
             height: 50%;
             color: white;
 
-            .btn {
-                margin-top: 2%;
-                
-                button {
-                    padding: 2%;
-                    margin-right: 2%;
-                    background: rgba(36, 36, 36, 0.719);
-                    color: rgb(182, 181, 181);
-                    border: none;
-
-                    &:hover {
-                        background: rgba(36, 36, 36, 0.89);
-                        color: white;
-                    }
-                }
+            h1 {
+                font-size: 2em;
+                font-weight: 600;
             }
 
             p {
+                margin-top: 2%;
+                width: 50%;
+            }
+
+            .btn {
                 margin-top: 3%;
+
+                button {
+                    padding: 1.5% 4%;
+                    margin-right: 2%;
+                    border: none;
+                    border-radius: 3%;
+                    background: $color-background;
+                    color: rgb(212, 212, 212);
+                    border-radius: 5%;
+                    transition: all 0.1s ease-in;
+                    cursor: pointer;
+    
+                    &:hover {
+                        transform: scale(1.1);
+                        color: white;
+                    }
+    
+                    &:first-child {
+                        background: $color-red;
+                    }
+    
+                    span {
+                        font-size: 12px;
+                        font-weight: 600;
+                        margin-left: 10px;
+                    }
+                }
             }
         }
     }

@@ -4,10 +4,11 @@ import { FiSmile } from "react-icons/fi";
 import { FiSearch } from "react-icons/fi";
 import { FiBell } from "react-icons/fi";
 import { FiGift } from "react-icons/fi";
+import SearchInput from '../containers/SearchInput';
 
 const Nav = () => {
 
-    // change background color
+    // change nav bg color
     const [scrolling, setScrolling] = useState(false);
 
     const handleScroll = () => {
@@ -32,7 +33,10 @@ const Nav = () => {
                     <div className="navigation_container link">My List</div>
                 </div>
                 <div className="icons">
-                    <div className="navigation_container link"><FiSearch/></div>
+                    <div className="search-box">
+                        <SearchInput/>
+                        {/* <input onChange={onChange} value={value} className="search-txt" type="text" placeholder=" Title "/> */}
+                    </div>
                     <div className="navigation_container link"><FiGift/></div>
                     <div className="navigation_container link"><FiBell/></div>
                     <div className="navigation_container link"><FiSmile/></div>

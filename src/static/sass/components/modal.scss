@@ -1,43 +1,83 @@
-.modalShowcase {
+.modalContainer {
+    z-index: 500;
     width: 100vw;
     height: 100vh;
-    background: $color-background;
+    background: rgba(44, 44, 44, 0.733);
     position: fixed;
     top: 0;
     left: 0;
-    opacity: 0.8;
-    display: none;
 
-    &.toggle {
+    &.show {
         display: block;
+    }
+
+    &.hide {
+        display: none;
     }
 
     .modal {
         position: absolute;
-        bottom: 0;
+        bottom: 10%;
         width: 100vw;
         height: 70vh;
-        background: grey;
+        background: rgb(44, 44, 44);
+        overflow: hidden;
+
+        img {
+            width: 120%;
+            height: auto;
+            position: absolute;
+            opacity: 0.6;
+        }
 
         .modal-content {
             padding: 5% 10%;
-            width: 60%;
-            height: 70%;
+            width: 50%;
+            height: 100%;
             display: flex;
             flex-direction: column;
+            position: relative;
+            
+
+            h1 {
+                margin-top: 5%;
+                color: white;
+            }
 
             p {
                 margin-top: 3%;
+                font-weight: 300;
+                text-transform: none;
             }
 
             .btn {
-                margin-top: 3%;
+                margin-top: 5%;
                 
                 button {
                     padding: 1.5% 4%;
                     margin-right: 2%;
                     border: none;
                     border-radius: 3%;
+                    background: $color-background;
+                    color: rgb(212, 212, 212);
+                    border-radius: 5%;
+                    transition: all 0.1s ease-in;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        color: white;
+                    }
+
+                    &:first-child {
+                        background: $color-red;
+                    }
+
+                    span {
+                        font-size: 12px;
+                        font-weight: 600;
+                        margin-left: 10px;
+                    }
                 }
             }
         }
