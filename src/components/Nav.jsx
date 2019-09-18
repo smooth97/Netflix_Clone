@@ -4,6 +4,7 @@ import { FiSmile } from "react-icons/fi";
 import { FiSearch } from "react-icons/fi";
 import { FiBell } from "react-icons/fi";
 import { FiGift } from "react-icons/fi";
+import SearchInput from '../containers/SearchInput';
 
 const Nav = () => {
 
@@ -34,7 +35,8 @@ const Nav = () => {
                 <div className="icons">
                     <div className="search-box">
                         <a className="searchLogo"><FiSearch/></a>
-                        <input className="search-txt" type="text" placeholder=" Title, genres"/>
+                        <SearchInput/>
+                        {/* <input onChange={onChange} value={value} className="search-txt" type="text" placeholder=" Title "/> */}
                     </div>
                     <div className="navigation_container link"><FiGift/></div>
                     <div className="navigation_container link"><FiBell/></div>
