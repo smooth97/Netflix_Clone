@@ -69,6 +69,10 @@ body {
 
         .link {
             margin-left: 2rem;
+            
+            @include responsive(phone) {
+                display: none;
+            }
 
             &:hover {
                 color: $color-dark-grey;

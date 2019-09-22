@@ -50,8 +50,24 @@
             cursor: pointer;
             transition: all 0.2s ease-in;
 
+            @include responsive(tab_port) {
+                height: 6em;
+            }
+
+            @include responsive(phone) {
+                height: 13em;
+            }
+
             &:hover {
                 height: 11em;
+
+                @include responsive(tab_port) {
+                    height: 9em;
+                }
+
+                @include responsive(phone) {
+                    height: 14em;
+                }
             }
         }
     }
@@ -95,6 +111,15 @@
         img {
             height: 27em;
             cursor: pointer;
+            transition: all 0.2s ease-in;
+
+            @include responsive(tab_port) {
+                height: 20em;
+            }
+
+            @include responsive(phone) {
+                height: 33em;
+            }
         }
     }
 }
