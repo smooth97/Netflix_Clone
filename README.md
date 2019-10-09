@@ -1,5 +1,7 @@
 # 넷플릭스 클론
 
+http://smooth-netflix-portfolio.s3-website.ap-northeast-2.amazonaws.com/
+
 프론트 엔드 React & Redux 공부용 Neflix Clone App.
 MovieDB Api 를 사용해서 영화를 검색하고 세부 정보를 확인할 수 있습니다.
 
