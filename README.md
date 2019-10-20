@@ -1,6 +1,6 @@
 # 넷플릭스 클론
 
-![screenshot](./src/scss/images/goplan.JPG)
+![screenshot](./src/static/scss/images/netflix.JPG)
 
 Live - http://smooth-netflix-portfolio.s3-website.ap-northeast-2.amazonaws.com/
 
